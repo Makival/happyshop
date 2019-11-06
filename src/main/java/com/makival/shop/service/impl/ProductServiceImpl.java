@@ -4,6 +4,7 @@ import com.makival.shop.domain.bean.Product;
 import com.makival.shop.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  * @author Kiryl Karatkevich
  * @since February 22, 2019
  */
+@Service
 public class ProductServiceImpl implements ProductService {
 
     private static final Logger LOG = LoggerFactory.getLogger(ProductServiceImpl.class);
