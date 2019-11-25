@@ -4,10 +4,10 @@ INSERT INTO USERS (id, name, role) VALUES
 ('3', 'Vovan', 'administrator');
 
 INSERT INTO PRODUCTS (id, name, type, description) VALUES
-('1', 'Vodka "Absolute"', 'alcohol', 'Old but gold classics'),
-('2', 'Red wine "Dragon blood"', 'alcohol', 'Sweet and hot'),
-('3', 'Cookies "Sweeties"', 'sweeties', 'Sweet flavour'),
-('4', 'Cheese "Maasdam"', 'tapas', 'Salty flavour');
+('1', 'Vodka "Absolute"', 'ALCOHOL', 'Old but gold classics'),
+('2', 'Red wine "Dragon blood"', 'ALCOHOL', 'Sweet and hot'),
+('3', 'Cookies "Sweeties"', 'SWEETIES', 'Sweet flavour'),
+('4', 'Cheese "Maasdam"', 'TAPAS', 'Salty flavour');
 
 INSERT INTO PRODUCT_PRICE (product_id, price) VALUES
 ('1', '100'),

@@ -6,8 +6,7 @@ package com.makival.shop.domain.enumeration;
  */
 public enum ProductType {
 
-    COOKIES,
-    CAKE,
-    VINE,
-    BEER;
+    SWEETIES,
+    TAPAS,
+    ALCOHOL;
 }
