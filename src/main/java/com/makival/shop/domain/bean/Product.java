@@ -2,6 +2,7 @@ package com.makival.shop.domain.bean;
 
 import com.makival.shop.domain.enumeration.ProductType;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -9,12 +10,29 @@ import java.util.Objects;
  * @author Kiryl Karatkevich
  * @since February 12, 2019
  */
-public class Product extends Bean{
+@Entity
+@Table(name = "PRODUCTS")
+@SecondaryTable(
+        name = "PRODUCT_PRICE",
+        pkJoinColumns = @PrimaryKeyJoinColumn(name = "product_id", referencedColumnName = "id"))
+@SecondaryTable(
+        name = "PRODUCT_QUANTITY",
+        pkJoinColumns = @PrimaryKeyJoinColumn(name = "product_id", referencedColumnName = "id"))
+public class Product extends Bean {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "type")
+    @Enumerated(EnumType.STRING)
     private ProductType type;
+    @Column(name = "description")
     private String description;
+    @Column(table = "PRODUCT_QUANTITY", name = "quantity")
     private int quantity;
+    @Column(table = "PRODUCT_PRICE", name = "price")
     private BigDecimal price;
 
     public String getName() {
